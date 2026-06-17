@@ -69,7 +69,7 @@ class KYCBaseAgent:
             response_text = response_data["choices"][0]["message"]["content"]
             
         except Exception as e:
-            print(f"⚠️ vLLM API Error: {e}")
+            print(f"vLLM API Error: {e}")
             if response is not None:
                 print(f"EXACT SERVER REASON: {response.text}")
             response_text = '{"error": "vLLM server failed."}'
