@@ -1,0 +1,12 @@
+Step1: 
+vllm serve Qwen/Qwen2.5-VL-7B-Instruct \
+  --port 8000 \
+  --gpu-memory-utilization 0.5
+
+Step2:
+apt-get update && apt-get install -y cmake build-essential g++ libopenblas-dev liblapack-dev poppler-utils 
+
+Step3:
+pip install streamlit face_recognition opencv-python-headless qwen-vl-utils Pillow pdf2image --ignore-installed blinker
+
+
